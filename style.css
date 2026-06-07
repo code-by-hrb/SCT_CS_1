@@ -1,0 +1,180 @@
+* {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }   
+body {
+    margin: 0;
+    padding: 20px;
+    height: 100vh;
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    position:relative; /* Required for the blur layer */
+    overflow-x: hidden;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body::before{
+    content: "";
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+     background-image:url('https://media.istockphoto.com/id/1166464106/vector/world-map-cybersecurity.jpg?s=612x612&w=0&k=20&c=6QB_E70GfYpNKf_YumZNV0wnnxeWtpmNiSL9j8ZY7G0=');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(5px);
+    background-color: rgba(65, 64, 64, 0.5); 
+    background-blend-mode: darken;
+    background-size: cover;
+    overflow: hidden;
+    z-index: -1; 
+    transform: scale(1.1);
+}
+.container{
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5), 0 0 15px rgba(56, 189, 248, 0.1);
+    align-items: center;
+    padding:30px;
+    border-radius: 12px;
+    width:100%;
+    max-width:550px;
+    border-color: aliceblue;
+    background-color:rgb(23, 23, 110) ;
+    background-blend-mode:hue;
+}
+h1{
+    text-align:center;
+    color:navy;
+    letter-spacing:0.5px;
+    margin-top:25px;
+    padding:10px;
+    font-size:1.8rem;
+    background-color:aliceblue;
+}
+.form_group{
+    box-sizing: content-box;
+    align-items: center;
+    padding:18px;
+    margin-bottom:15px;
+}
+button{
+    width:100%;
+    background-color: aquamarine;
+    padding: 14px;
+    color:navy; 
+    font-size: 18px;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:background-color 0.2s, transform 0.1s;
+    margin-bottom:20px;
+}
+button:hover{
+    background-color:coral;
+}
+button:active{
+    transform:scale(0.98);
+}
+label{
+    display:block;
+    margin-bottom:5px;
+    font-weight: 600;
+    color:white;
+    font-size: 20px;
+}
+textarea{
+    resize:vertical;
+    height:110px;
+    width:100%;
+    font-size: 18px;
+    border-radius:8px;
+    padding: 12px 10px;
+    background-color:rgb(250, 250, 211);
+}
+textarea:focus, 
+    input[type="number"]:focus, 
+    select:focus {
+        outline: none;
+        border:3px solid;
+        border-color: #38bdf8;
+    }
+select{
+     font-weight:400;
+     width:100%;
+     border-radius:3px;
+     font-size:15px;
+     padding:2px 3px;
+     resize:vertical;
+}
+input[type="number"], select{
+    padding:12px;
+    background-color:rgb(250, 250, 211);
+    border:1px solid #334155;
+    border-radius:8px;
+    font-size: 16px; 
+    transition:border-color 0.2s;
+    box-sizing: border-box;
+    font-weight:400;
+    padding:12px 3px;
+    margin-top:5px;
+    width:100%;
+    transition: all 0.2s ease-in-out;
+}
+#shiftkey{
+    width:80%;
+    padding:13px 7px;
+    font-size: 16px;
+    background-color:rgb(250, 250, 211);
+    border-radius: 5px;
+}
+.result-box{
+     padding: 20px;
+     border-radius:6px;
+     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background: linear-gradient(to right, rgb(166, 253, 234), rgb(98, 98, 247));
+}
+.result-title{
+    text-transform: uppercase;
+    margin-bottom:8px;
+    letter-spacing: 1px;
+    font-size: 18px;
+    font-weight: bold;
+    background-color: rgb(3, 3, 90);
+    padding:8px 20px;
+    margin-top:2px;
+    color: white;
+    letter-spacing: 1px;
+}
+.result-text{
+    word-wrap: break-word;
+    font-size: 18px;
+    padding:12px 5px;
+    font-weight:500;
+    color:rgb(1, 1, 48);
+}
+.row{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+.row .form_group{
+    flex:1;
+}
+@media (min-width: 480px) {
+    .row {
+        flex-direction: row; /* Switch items side-by-side horizontally */
+    }
+    .row .form_group {
+        flex: 1; /* Split screen space evenly between the two inputs */
+    }
+}
+
+
+
+
